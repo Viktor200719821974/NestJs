@@ -26,7 +26,8 @@ import { AuthModule } from './auth/auth.module';
       migrations: ['dist/migrations/*.js'],
       cli: {
         migrationsDir: 'src/migrations',
-      }
+      },
+      autoLoadEntities: true,
     }),
       UsersModule,
       AuthModule

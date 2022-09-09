@@ -13,11 +13,11 @@ export class UsersService {
         return await this.userRepository.find();
     }
 
-    async getUserById(id) {
-        return await this.userRepository.findOne({id});
+    async getUserById(id: number) {
+        return await this.userRepository.findOne({where: { id } });
     }
 
     async createUser(dto: CreateUserDto) {
-        return await this.userRepository.create(dto);
+        return await this.userRepository.save(dto);
     }
 }

@@ -20,7 +20,7 @@ export class UsersController {
     @ApiResponse({status: 200, type: User})
     @Get('/:id')
     getUserById(@Param('id') id: string) {
-        return this.usersService.getUserById(id);
+        return this.usersService.getUserById(Number(id));
     }
 
     @ApiOperation({summary: 'Create new user'})
