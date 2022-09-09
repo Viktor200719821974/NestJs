@@ -11,5 +11,6 @@ export class CreateUserDto {
     @ApiProperty({example: 'Sumy', description: 'city'})
     readonly city: string;
 
-    readonly status?: boolean;
+    @ApiProperty()
+    readonly status: boolean;
 }
