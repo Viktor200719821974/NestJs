@@ -12,7 +12,7 @@ export class UsersController {
     @ApiOperation({summary: 'Get all users'})
     @Get()
     getAllUsers() {
-        return {name: 'Vasya', age: 15, status: false}
+        return this.usersService.getAllUsers();
     }
 
     @ApiOperation({summary: 'Create new user'})

@@ -22,6 +22,6 @@ export class User extends Model<User, IUser> {
     @Column({ type: DataType.STRING, allowNull: false })
     city: string;
 
-    @Column({ type: DataType.BOOLEAN })
+    @Column({ type: DataType.BOOLEAN, defaultValue: false })
     status: boolean;
 }

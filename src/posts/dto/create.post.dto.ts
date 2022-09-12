@@ -2,10 +2,10 @@ import {ApiProperty} from '@nestjs/swagger';
 
 export class CreatePostDto {
 
-    @ApiProperty({example: 'user@mail.com', description: 'email'})
+    @ApiProperty({example: 'Name post', description: 'title'})
     readonly title: string;
 
-    @ApiProperty({example: 'password11', description: 'password'})
+    @ApiProperty({example: 'Text', description: 'content'})
     readonly content: string;
 
     @ApiProperty({})

@@ -2,7 +2,7 @@ import {BelongsTo, Column, DataType, ForeignKey, Model, Table} from 'sequelize-t
 import {User} from "../users/users.model";
 
 interface IPost {
-    // id: number;
+    id: number;
     title: string;
     content: string;
     image: string;

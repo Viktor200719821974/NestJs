@@ -5,6 +5,7 @@ import { UsersController } from './users/users.controller';
 import {User} from './users/users.model';
 import {UsersModule} from './users/users.module';
 import { FilesModule } from './files/files.module';
+import {PostsModule} from './posts/posts.module';
 
 @Module({
   controllers: [UsersController],
@@ -22,7 +23,8 @@ import { FilesModule } from './files/files.module';
       autoLoadModels: true,
     }),
       UsersModule,
-      FilesModule
+      FilesModule,
+      PostsModule
   ],
 })
 export class AppModule {}

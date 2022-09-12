@@ -11,4 +11,8 @@ export class UsersService {
     async createUser(dto: CreateUserDto) {
         return await this.userRepository.create(dto);
     }
+
+    async getAllUsers() {
+        return await this.userRepository.findAll({});
+    }
 }
