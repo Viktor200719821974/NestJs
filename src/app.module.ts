@@ -4,10 +4,13 @@ import { ConfigModule } from '@nestjs/config';
 import { UsersController } from './users/users.controller';
 import {UsersModule} from './users/users.module';
 import { AuthModule } from './auth/auth.module';
+import { PostsController } from './posts/posts.controller';
+import { PostsService } from './posts/posts.service';
+import { PostsModule } from './posts/posts.module';
 
 @Module({
-  controllers: [UsersController],
-  providers: [],
+  controllers: [UsersController, PostsController],
+  providers: [PostsService],
   imports: [
     ConfigModule.forRoot({
       envFilePath: '.env',
@@ -30,7 +33,8 @@ import { AuthModule } from './auth/auth.module';
       autoLoadEntities: true,
     }),
       UsersModule,
-      AuthModule
+      AuthModule,
+      PostsModule
   ],
 })
 export class AppModule {}
