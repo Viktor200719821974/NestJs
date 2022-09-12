@@ -4,6 +4,7 @@ import { ConfigModule } from '@nestjs/config';
 import { UsersController } from './users/users.controller';
 import {User} from './users/users.model';
 import {UsersModule} from './users/users.module';
+import { FilesModule } from './files/files.module';
 
 @Module({
   controllers: [UsersController],
@@ -20,7 +21,8 @@ import {UsersModule} from './users/users.module';
       models: [User],
       autoLoadModels: true,
     }),
-      UsersModule
+      UsersModule,
+      FilesModule
   ],
 })
 export class AppModule {}

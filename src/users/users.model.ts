@@ -1,7 +1,7 @@
 import {Column, DataType, Model, Table} from 'sequelize-typescript';
 
 interface IUser {
-    id: number;
+    // id: number;
     email: string;
     password: string;
     city: string;
