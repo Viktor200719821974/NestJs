@@ -1,4 +1,4 @@
-import {Body, Controller, Get, Post, UseGuards} from '@nestjs/common';
+import {Body, Controller, Get, Param, Post, UseGuards} from '@nestjs/common';
 import { CreateUserDto } from './dto/create.user.dto';
 import {ApiOperation, ApiTags} from '@nestjs/swagger';
 import {UsersService} from './users.service';
@@ -17,6 +17,11 @@ export class UsersController {
         return this.usersService.getAllUsers();
     }
 
+    @ApiOperation({summary: 'Get user id'})
+    @Get('/:id')
+    getUserById(@Param('id') id: string) {
+        return this.usersService.getUserById(Number(id));
+    }
     @ApiOperation({summary: 'Create new user'})
     @Post()
     create(@Body() userDto: CreateUserDto) {
