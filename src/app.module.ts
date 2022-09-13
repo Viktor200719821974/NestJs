@@ -6,6 +6,7 @@ import {User} from './users/users.model';
 import {UsersModule} from './users/users.module';
 import { FilesModule } from './files/files.module';
 import {PostsModule} from './posts/posts.module';
+import {AuthModule} from './auth/auth.module';
 
 @Module({
   controllers: [UsersController],
@@ -24,7 +25,8 @@ import {PostsModule} from './posts/posts.module';
     }),
       UsersModule,
       FilesModule,
-      PostsModule
+      PostsModule,
+      AuthModule,
   ],
 })
 export class AppModule {}
